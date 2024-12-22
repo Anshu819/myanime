@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Recommendations</title>
+</head>
+<body>
+    <h1>Anime Recommendations</h1>
+    <ul>
+        {% for recommendation in recommendations %}
+            <li>
+                <strong>{{ recommendation.title }}</strong><br>
+                Episodes: {{ recommendation.episodes }}<br>
+                Total Time: {{ recommendation.total_time }}<br>
+                More Info: <a href="{{ recommendation.url }}" target="_blank">Link</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to main page</a>
+</body>
+</html>
